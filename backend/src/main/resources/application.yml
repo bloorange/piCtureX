@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: picturex-backend
+  
+  datasource:
+    url: jdbc:mysql://localhost:3306/picturex?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: Cyf20050210
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+  
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+# 文件上传配置
+file:
+  upload:
+    path: ./uploads
+    thumbnail:
+      path: ./thumbnails
+      width: 300
+      height: 300
+
+# JWT配置
+jwt:
+  secret: picturex-secret-key-2024-very-long-and-secure
+  expiration: 86400000 # 24小时
+
+server:
+  port: 8080
+  cors:
+    allowed-origins: http://localhost:3000
+    allowed-methods: GET,POST,PUT,DELETE,OPTIONS
+    allowed-headers: "*"
+    allow-credentials: true
+

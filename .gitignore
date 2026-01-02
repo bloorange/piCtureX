@@ -1,0 +1,30 @@
+# 后端
+backend/target/
+backend/.mvn/
+backend/mvnw
+backend/mvnw.cmd
+backend/uploads/
+backend/thumbnails/
+backend/.idea/
+backend/*.iml
+
+# 前端
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+
+# 日志
+*.log
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
